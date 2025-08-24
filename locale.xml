@@ -20,8 +20,28 @@
             <en><![CDATA[FAQ Entry]]></en>
         </locale>
         <locale name="admin.types.faq.list">
+            <de><![CDATA[FAQ-Liste (deprecated)]]></de>
+            <en><![CDATA[FAQ: List (deprecated)]]></en>
+        </locale>
+        <locale name="admin.types.faq.list2025">
             <de><![CDATA[FAQ-Liste]]></de>
             <en><![CDATA[FAQ: List]]></en>
+        </locale>
+        <locale name="admin.types.faq.list2025.desc">
+            <de><![CDATA[Verbesserte FAQ-Liste mit korrekten semantischen Elementen und Schema Markup.]]></de>
+            <en><![CDATA[Improved FAQ List with correct semantic elements and Schema Markup.]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.title">
+            <de><![CDATA[FAQ-Liste: Einstellungen]]></de>
+            <en><![CDATA[FAQ List: Settings]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.template">
+            <de><![CDATA[Vorlage]]></de>
+            <en><![CDATA[Template]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.template.default">
+            <de><![CDATA[Standard]]></de>
+            <en><![CDATA[Default]]></en>
         </locale>
         <locale name="admin.types.faq.category">
             <de><![CDATA[FAQ-Kategorie]]></de>

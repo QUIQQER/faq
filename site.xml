@@ -9,6 +9,36 @@
             </desc>
         </type>
 
+        <type type="types/list2025" icon="fa fa-list-alt" child-type="quiqqer/faq:types/category">
+            <locale group="quiqqer/faq" var="admin.types.faq.list2025" />
+            <desc>
+                <locale group="quiqqer/faq" var="admin.types.faq.list2025.desc" />
+            </desc>
+
+            <attributes>
+                <attribute default="default">quiqqer.faq.list.settings.template</attribute>
+            </attributes>
+
+            <settings>
+                <category name="faq-category-list-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.title"/>
+                        </title>
+
+                        <select conf="quiqqer.faq.list.settings.template">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.template"/>
+                            </text>
+                            <option value="default">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.template.default"/>
+                            </option>
+                        </select>
+                    </settings>
+                </category>
+            </settings>
+        </type>
+
         <type type="types/category" icon="fa fa-question-circle" child-type="quiqqer/faq:types/entry">
             <locale group="quiqqer/faq" var="admin.types.faq.category" />
             <desc>

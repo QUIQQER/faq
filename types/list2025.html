@@ -1,0 +1,9 @@
+{if $Template->getAttribute('content-body') && $Site->getAttribute('content')}
+    <section class="content-body">
+        {$Site->getAttribute('content')}
+    </section>
+{/if}
+
+<div class="content-template content-template__faqList2025">
+    {$FAQListControl->create()}
+</div>
