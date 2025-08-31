@@ -5,6 +5,11 @@
     --_box-borderRadius: var(--box-borderRadius, .5rem);
     --_box-borderWidth: var(--box-borderWidth, 0);
     --_box-borderColor: var(--box-borderColor, inherit);
+    --_btn-alignment: var(--btn-alignment, var(--settings--qui-faq-control-categoryList-btnAlignment, stretch));
+    --_text-flexbox-alignment: var(--text-flexbox-alignment, var(--settings--qui-faq-control-categoryList-textFlexboxAlignment, left));
+    --_text-alignment: var(--text-alignment, var(--settings--qui-faq-control-categoryList-textAlignment, left));
+    --_image-width: var(--image-width, var(--settings--qui-faq-control-categoryList-imageWidth, 10rem));
+    --_image-alignment: var(--image-alignment, var(--settings--qui-faq-control-categoryList-imageAlignment, center));
 }
 
 .quiqqer-faq-control-categoryList--default :where(.entries) {
@@ -24,14 +29,24 @@
     border-radius: var(--_box-borderRadius);
 }
 
+.quiqqer-faq-control-categoryList--default :where(.entry__image) {
+    margin-bottom: 0.5em;
+    max-width: var(--_image-width);
+    align-self: var(--_image-alignment);
+}
+
 .quiqqer-faq-control-categoryList--default :where(.entry__title) {
     margin-bottom: 0.5em;
     font-size: 1.125em;
     font-weight: bold;
+    text-align: var(--_text-alignment);
+    align-self: var(--_text-flexbox-alignment);
 }
 
 .quiqqer-faq-control-categoryList--default :where(.entry__desc) {
     margin-bottom: 1.5em;
+    text-align: var(--_text-alignment);
+    align-self: var(--_text-flexbox-alignment);
 }
 
 .quiqqer-faq-control-categoryList--default :where(.entry__title):not(:hover) {
@@ -40,6 +55,7 @@
 
 .quiqqer-faq-control-categoryList--default :where(.entry__btn) {
     margin-top: auto;
+    align-self: var(--_btn-alignment);
 }
 
 .quiqqer-faq-control-categoryList--default :where(.entry__separator) {

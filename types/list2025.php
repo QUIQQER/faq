@@ -10,7 +10,15 @@
  **/
 
 $FAQListControl = new QUI\FAQ\Controls\CategoryList([
-  'template' => $Site->getAttribute('template'),
+  'template' => $Site->getAttribute('quiqqer.faq.list2025.settings.template'),
+  'showImage' => $Site->getAttribute('quiqqer.faq.list2025.settings.showImage'),
+  'imageWidth' => $Site->getAttribute('quiqqer.faq.list2025.settings.imageWidth'),
+  'imageAlignment' => $Site->getAttribute('quiqqer.faq.list2025.settings.imageAlignment'),
+  'showTitle' => $Site->getAttribute('quiqqer.faq.list2025.settings.showTitle'),
+  'showDesc' => $Site->getAttribute('quiqqer.faq.list2025.settings.showDesc'),
+  'textAlignment' => $Site->getAttribute('quiqqer.faq.list2025.settings.textAlignment'),
+  'showButton' => $Site->getAttribute('quiqqer.faq.list2025.settings.showButton'),
+  'btnAlignment' => $Site->getAttribute('quiqqer.faq.list2025.settings.btnAlignment'),
   'parentSite' => $Site
 ]);
 
