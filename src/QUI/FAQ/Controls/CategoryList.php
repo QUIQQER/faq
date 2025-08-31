@@ -42,7 +42,7 @@ class CategoryList extends QUI\Control
             'showDesc' => true,
             'textAlignment' => 'left', // left / center / right
             'showButton' => true,
-            'btnAlignment'=> 'stretch' // stretch / flex-start / center / flex-end
+            'btnAlignment' => 'stretch' // stretch / flex-start / center / flex-end
         ]);
 
         parent::__construct($attributes);
