@@ -41,15 +41,6 @@
                             <option value="default">
                                 <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.template.default"/>
                             </option>
-                            <option value="defaultImage">
-                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.template.defaultImage"/>
-                            </option>
-                            <option value="defaultImageTitle">
-                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.template.defaultImageTitle"/>
-                            </option>
-                            <option value="defaultImageTitleDesc">
-                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.template.defaultImageTitleDesc"/>
-                            </option>
                         </select>
 
                         <input conf="quiqqer.faq.list2025.settings.showImage" type="checkbox">

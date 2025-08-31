@@ -43,6 +43,117 @@
             <de><![CDATA[Standard]]></de>
             <en><![CDATA[Default]]></en>
         </locale>
+        <locale name="quiqqer.faq.list2025.settings.showImage">
+            <de><![CDATA[Bild anzeigen]]></de>
+            <en><![CDATA[Show image]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.showImage.desc">
+            <de><![CDATA[Wenn aktiviert und die Seite ein Bild enthält, wird das Bild angezeigt. <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
+            <en><![CDATA[If enabled and the page contains an image, the image will be displayed. <strong>Note:</strong> Not every template supports this option.]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.imageWidth">
+            <de><![CDATA[Bildbreite]]></de>
+            <en><![CDATA[Image width]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.imageWidth.desc">
+            <de><![CDATA[Maximale Breite des Bildes. <strong>Hinweis:</strong> Nur valide CSS-Werte mit Einheiten sind erlaubt. Beispiele: 10rem, 100px, 50%, 10vw, etc.]]></de>
+            <en><![CDATA[Maximum width of the image. <strong>Note:</strong> Only valid CSS values with units are allowed. Examples: 10rem, 100px, 50%, 10vw, etc.]]></en>
+        </locale>
+
+        <locale name="quiqqer.faq.list2025.settings.imageAlignment">
+            <de><![CDATA[Bild Positionierung]]></de>
+            <en><![CDATA[Image alignment]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.imageAlignment.desc">
+            <de><![CDATA[Bestimmt die Position des Bildes. <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
+            <en><![CDATA[Determines the position of the image. <strong>Note:</strong> Not every template supports this option.]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.imageAlignment.left">
+            <de><![CDATA[Links]]></de>
+            <en><![CDATA[Left]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.imageAlignment.center">
+            <de><![CDATA[Zentriert]]></de>
+            <en><![CDATA[Center]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.imageAlignment.right">
+            <de><![CDATA[Rechts]]></de>
+            <en><![CDATA[Right]]></en>
+        </locale>
+
+        <locale name="quiqqer.faq.list2025.settings.showTitle">
+            <de><![CDATA[Titel anzeigen]]></de>
+            <en><![CDATA[Show title]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.showTitle.desc">
+            <de><![CDATA[Wenn aktiviert, wird der Titel angezeigt. <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
+            <en><![CDATA[If enabled, the title will be displayed. <strong>Note:</strong> Not every template supports this option.]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.showDesc">
+            <de><![CDATA[Beschreibung anzeigen]]></de>
+            <en><![CDATA[Show description]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.showDesc.desc">
+            <de><![CDATA[Wenn aktiviert, wird die Beschreibung angezeigt. <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
+            <en><![CDATA[If enabled, the description will be displayed. <strong>Note:</strong> Not every template supports this option.]]></en>
+        </locale>
+
+        <locale name="quiqqer.faq.list2025.settings.textAlignment">
+            <de><![CDATA[Text Positionierung]]></de>
+            <en><![CDATA[Text alignment]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.textAlignment.desc">
+            <de><![CDATA[Bestimmt die Position des Titles und der Beschreibung. <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
+            <en><![CDATA[Determines the position of the title and description. <strong>Note:</strong> Not every template supports this option.]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.textAlignment.left">
+            <de><![CDATA[Links]]></de>
+            <en><![CDATA[Left]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.textAlignment.center">
+            <de><![CDATA[Zentriert]]></de>
+            <en><![CDATA[Center]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.textAlignment.right">
+            <de><![CDATA[Rechts]]></de>
+            <en><![CDATA[Right]]></en>
+        </locale>
+
+        <locale name="quiqqer.faq.list2025.settings.showButton">
+            <de><![CDATA[Schaltfläche anzeigen]]></de>
+            <en><![CDATA[Show button]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.showButton.desc">
+            <de><![CDATA[Wenn aktiviert, wird die Schlatfläche (Button) angezeigt. <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
+            <en><![CDATA[If enabled, the button will be displayed. <strong>Note:</strong> Not every template supports this option.]]></en>
+        </locale>
+
+        <locale name="quiqqer.faq.list2025.settings.btnAlignment">
+            <de><![CDATA[Schaltfläche Positionierung]]></de>
+            <en><![CDATA[Button alignment]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.btnAlignment.desc">
+            <de><![CDATA[Bestimmt die Position der Schaltfläche (des Buttons). <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
+            <en><![CDATA[Determines the position of the button. <strong>Note:</strong> Not every template supports this option.]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.btnAlignment.stretch">
+            <de><![CDATA[Volle breite]]></de>
+            <en><![CDATA[Full width]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.btnAlignment.left">
+            <de><![CDATA[Links]]></de>
+            <en><![CDATA[Left]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.btnAlignment.center">
+            <de><![CDATA[Zentriert]]></de>
+            <en><![CDATA[Center]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.btnAlignment.right">
+            <de><![CDATA[Rechts]]></de>
+            <en><![CDATA[Right]]></en>
+        </locale>
+
+
         <locale name="admin.types.faq.category">
             <de><![CDATA[FAQ-Kategorie]]></de>
             <en><![CDATA[FAQ: Category]]></en>
