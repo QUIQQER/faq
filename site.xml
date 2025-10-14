@@ -9,6 +9,146 @@
             </desc>
         </type>
 
+        <type type="types/list2025" icon="fa fa-list-alt" child-type="quiqqer/faq:types/category">
+            <locale group="quiqqer/faq" var="admin.types.faq.list2025" />
+            <desc>
+                <locale group="quiqqer/faq" var="admin.types.faq.list2025.desc" />
+            </desc>
+
+            <attributes>
+                <attribute default="default">quiqqer.faq.list2025.settings.template</attribute>
+                <attribute default="1">quiqqer.faq.list2025.settings.showImage</attribute>
+                <attribute>quiqqer.faq.list2025.settings.imageWidth</attribute>
+                <attribute default="center">quiqqer.faq.list2025.settings.imageAlignment</attribute>
+                <attribute default="1">quiqqer.faq.list2025.settings.showTitle</attribute>
+                <attribute default="1">quiqqer.faq.list2025.settings.showDesc</attribute>
+                <attribute default="left">quiqqer.faq.list2025.settings.textAlignment</attribute>
+                <attribute default="1">quiqqer.faq.list2025.settings.showButton</attribute>
+                <attribute default="stretch">quiqqer.faq.list2025.settings.btnAlignment</attribute>
+            </attributes>
+
+            <settings>
+                <category name="faq-category-list2025-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.title"/>
+                        </title>
+
+                        <select conf="quiqqer.faq.list2025.settings.template">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.template"/>
+                            </text>
+                            <option value="default">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.template.default"/>
+                            </option>
+                        </select>
+
+                        <input conf="quiqqer.faq.list2025.settings.showImage" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.showImage"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.showImage.desc"/>
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.faq.list2025.settings.imageWidth" type="text">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.imageWidth"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.imageWidth.desc"/>
+                            </description>
+                        </input>
+
+                        <select conf="quiqqer.faq.list2025.settings.imageAlignment">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.imageAlignment"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.imageAlignment.desc"/>
+                            </description>
+                            <option value="left">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.imageAlignment.left"/>
+                            </option>
+                            <option value="center">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.imageAlignment.center"/>
+                            </option>
+                            <option value="right">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.imageAlignment.right"/>
+                            </option>
+                        </select>
+
+                        <input conf="quiqqer.faq.list2025.settings.showTitle" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.showTitle"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.showTitle.desc"/>
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.faq.list2025.settings.showDesc" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.showDesc"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.showDesc.desc"/>
+                            </description>
+                        </input>
+
+                        <select conf="quiqqer.faq.list2025.settings.textAlignment">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.textAlignment"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.textAlignment.desc"/>
+                            </description>
+                            <option value="left">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.textAlignment.left"/>
+                            </option>
+                            <option value="center">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.textAlignment.center"/>
+                            </option>
+                            <option value="right">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.textAlignment.right"/>
+                            </option>
+                        </select>
+
+                        <input conf="quiqqer.faq.list2025.settings.showButton" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.showButton"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.showButton.desc"/>
+                            </description>
+                        </input>
+
+                        <select conf="quiqqer.faq.list2025.settings.btnAlignment">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnAlignment"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnAlignment.desc"/>
+                            </description>
+                            <option value="stretch">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnAlignment.stretch"/>
+                            </option>
+                            <option value="left">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnAlignment.left"/>
+                            </option>
+                            <option value="center">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnAlignment.center"/>
+                            </option>
+                            <option value="right">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnAlignment.right"/>
+                            </option>
+                        </select>
+                    </settings>
+                </category>
+            </settings>
+        </type>
+
         <type type="types/category" icon="fa fa-question-circle" child-type="quiqqer/faq:types/entry">
             <locale group="quiqqer/faq" var="admin.types.faq.category" />
             <desc>

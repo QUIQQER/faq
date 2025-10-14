@@ -1,0 +1,74 @@
+{if $this->getAttribute('content') != ""}
+    <div class="control-body">
+        {$this->getAttribute('content')}
+    </div>
+{/if}
+
+<div class="control-template entries">
+    {foreach from=$faqCategories item=Category}
+
+        {assign var=nextCategoryLevel value=false}
+        {if $Category->getAttribute('type') == 'quiqqer/faq:types/list'}
+            {assign var=nextCategoryLevel value=true}
+        {/if}
+
+        <section class="entry {if !$nextCategoryLevel} lastCategoryLevel{/if}"
+                 itemscope itemtype="https://schema.org/ItemList"
+        >
+            {if $showImage}
+                <a itemprop="mainEntityOfPage" href="{url site=$Category}" class="entry__image">
+                    {image src=$Category->getAttribute('image_site') title=$Category->getAttribute('title')}
+                </a>
+            {/if}
+
+            {if $showTitle}
+            <a itemprop="mainEntityOfPage" href="{url site=$Category}" class="entry__title">
+                <span itemprop="name">{$Category->getAttribute('title')}</span>
+            </a>
+            {/if}
+
+            {if $showDesc}
+            <div class="entry__desc">
+                {$Category->getAttribute('short')}
+            </div>
+            {/if}
+
+            {if !$nextCategoryLevel && $showButton}
+                <a itemprop="url" href="{url site=$Category}" class="btn btn-primary entry__btn">
+                    {locale group="quiqqer/faq" value="more"}
+                </a>
+            {/if}
+
+            {if $nextCategoryLevel}
+                {assign var=faqList value=$Category->getChildren()}
+                {if count($faqList)}
+                    <hr class="entry__separator">
+
+                    <ul itemscope itemtype="https://schema.org/ItemList" class="entry__list">
+                        {assign var=position value=1}
+                        {foreach $faqList as $Faq}
+                            <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="entry__list-item">
+
+                                {if $Faq->getAttribute('type') == 'quiqqer/faq:types/entry'}
+                                    {assign var=url value="{url site=$Category}#faq{$Faq->getId()}"}
+                                {else}
+                                    {assign var=url value={url site=$Faq}}
+                                {/if}
+
+                                <a itemprop="url" href="{$url}" class="entry__list-item-link">
+                                    <span class="entry__list-item-link__title">
+                                        <span itemprop="name">{$Faq->getAttribute('title')}</span>
+                                        <meta itemprop="position" content="{$position}" />
+                                    </span>
+                                        <i class="fa-solid fa-arrow-right entry__list-item-link__icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            {assign var=position value=$position+1}
+                        {/foreach}
+                    </ul>
+                {/if}
+            {/if}
+
+        </section>
+    {/foreach}
+</div>
