@@ -77,7 +77,7 @@ class CategoryList extends QUI\Control
             return '';
         }
 
-        if (!$FAQParentSite) {
+        if ($FAQParentSite === null) {
             QUI\System\Log::addError('No FAQ category parent site found');
             return '';
         }
