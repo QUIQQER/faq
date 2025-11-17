@@ -17,7 +17,7 @@
 
             <section class="content-template-faq-list-category
                             {if !$nextCategoryLevel} lastCategoryLevel{/if}"
-                     itemscope itemtype="http://schema.org/ItemList"
+                     itemscope itemtype="https://schema.org/ItemList"
             >
                 <h2 class="control-color">
                     <a itemprop="mainEntityOfPage" href="{url site=$Category}">
@@ -38,10 +38,10 @@
                 {if $nextCategoryLevel}
                     {assign var=faqList value=$Category->getChildren()}
                     {if count($faqList)}
-                    <ul itemscope itemtype="http://schema.org/ItemList">
+                    <ul itemscope itemtype="https://schema.org/ItemList">
                         {assign var=position value=1}
                         {foreach $faqList as $Faq}
-                        <li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                        <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
 
                             {if $Faq->getAttribute('type') == 'quiqqer/faq:types/entry'}
                             <a itemprop="url" href="{url site=$Category}#faq{$Faq->getId()}">

@@ -130,11 +130,11 @@ define('package/quiqqer/faq/bin/Category', [
                     y: -this.offset
                 },
                 onComplete: function () {
-                    if (window.location.hash === '#' + self.FAQList.getAttribute('name')) {
+                    if (window.location.hash === '#' + self.FAQList.getAttribute('id')) {
                         return;
                     }
 
-                    window.location = '#' + self.FAQList.getAttribute('name');
+                    window.location = '#' + self.FAQList.getAttribute('id');
                 }
             }).toElement(this.FAQList);
         }

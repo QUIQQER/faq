@@ -1,4 +1,4 @@
-<div itemscope itemtype="http://schema.org/Question">
+<div itemscope itemtype="https://schema.org/Question">
 
     {if $Template->getAttribute('content-header')}
     <section class="content-header grid-100 mobile-grid-100">
@@ -16,7 +16,7 @@
 
     {if $Template->getAttribute('content-body') && $Site->getAttribute('content')}
     <section class="content-body grid-100 mobile-grid-100"
-        itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+        itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
         {$Site->getAttribute('content')}
     </section>
     {/if}

@@ -1,13 +1,5 @@
-
-
-/*
-.quiqqer-faq article {
-    clear: both;
-    float: right;
-    width: 100%;
-}*/
-
 .quiqqer-faq-list {
+    scroll-margin-top: var(--_qui-faq-scrollOffset, 0);
     list-style: none;
     padding-left: 0;
 }
@@ -34,6 +26,13 @@
     opacity: 0.5;
 }
 
+.quiqqer-faq__entry {
+    scroll-margin-top: var(--_qui-faq-scrollOffset, 0);
+    display: flow-root;
+    margin-block: 1rem;
+    width: 100%;
+}
+
 .quiqqer-faq-list li:hover:before {
     background: #e2e2e2;
 }
@@ -52,7 +51,6 @@
 
 .quiqqer-faq-list-linkToTop .fa {
     opacity: 0.4;
-    transition: 0.3s all ease-in-out;
 }
 
 .quiqqer-faq-list-linkToTop:hover .fa {
