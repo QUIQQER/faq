@@ -11,7 +11,7 @@
             {foreach from=$categories item=Category}
 
             {assign var=nextCategoryLevel value=false}
-            {if $Category->getAttribute('type') == 'quiqqer/faq:types/list'}
+                {if $Category->getAttribute('type') == 'quiqqer/faq:types/list'}
             {assign var=nextCategoryLevel value=true}
             {/if}
 

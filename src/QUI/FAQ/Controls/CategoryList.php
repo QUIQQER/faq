@@ -35,14 +35,16 @@ class CategoryList extends QUI\Control
             'max' => false, // max entries
             'parentSite' => null,
             'template' => 'default',
+            'subpages' => '', // '' / categories / all
             'showImage' => false,
-            'imageWidth' => '', // any css valid value
+            'imageWidth' => 'all', // any css valid value
             'imageAlignment' => 'center', // flex-start / center / flex-end
             'showTitle' => true,
             'showDesc' => true,
             'textAlignment' => 'left', // left / center / right
             'showButton' => true,
-            'btnAlignment' => 'stretch' // stretch / flex-start / center / flex-end
+            'btnAlignment' => 'stretch', // stretch / flex-start / center / flex-end
+            'btnCssClass' => ''
         ]);
 
         parent::__construct($attributes);
@@ -121,6 +123,21 @@ class CategoryList extends QUI\Control
         $this->setStyle('--settings--qui-faq-control-categoryList-textFlexboxAlignment', $textFlexboxAlignment);
         $this->setStyle('--settings--qui-faq-control-categoryList-textAlignment', $textAlignment);
 
+        // subpages
+        $types = [];
+        $subpages = '';
+        switch ($this->getAttribute('subpages')) {
+            case 'categories':
+                $subpages = 'categories';
+                // show faq lists and faq categories
+                $types = ['quiqqer/faq:types/list2025'];
+                break;
+            case 'all':
+                $subpages = 'all';
+                $types = ['quiqqer/faq:types/list2025', 'quiqqer/faq:types/category'];
+                break;
+        }
+
         // template
         $template = $this->getAttribute('template');
 
@@ -143,7 +160,10 @@ class CategoryList extends QUI\Control
             'showTitle' => $this->getAttribute('showTitle'),
             'showDesc' => $this->getAttribute('showDesc'),
             'showButton' => $this->getAttribute('showButton'),
-            'btnAlignment' => $btnAlignment
+            'btnAlignment' => $btnAlignment,
+            'btnCssClass' => $this->getAttribute('btnCssClass'),
+            'subpages' => $subpages,
+            'types' => $types
         ]);
 
         return $Engine->fetch($html);
