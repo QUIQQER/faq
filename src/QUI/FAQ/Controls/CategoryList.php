@@ -129,7 +129,6 @@ class CategoryList extends QUI\Control
         switch ($this->getAttribute('subpages')) {
             case 'categories':
                 $subpages = 'categories';
-                // show faq lists and faq categories
                 $types = ['quiqqer/faq:types/list2025'];
                 break;
             case 'all':
