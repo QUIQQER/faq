@@ -4,50 +4,56 @@
     </div>
 {/if}
 
-<div class="control-template entries">
+<div class="control-template faqEntries" itemscope itemtype="https://schema.org/ItemList">
     {foreach from=$faqCategories item=Category}
-
-        {assign var=nextCategoryLevel value=false}
-        {if $Category->getAttribute('type') == 'quiqqer/faq:types/list'}
-            {assign var=nextCategoryLevel value=true}
+        {assign var=enableSubpages value=false}
+        {if $subpages && in_array($Category->getAttribute('type'), $types)}
+            {assign var=enableSubpages value=true}
         {/if}
 
-        <section class="entry {if !$nextCategoryLevel} lastCategoryLevel{/if}"
-                 itemscope itemtype="https://schema.org/ItemList"
-        >
+        <section class="faqEntry" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+            <a itemprop="url"
+               href="{url site=$Category}"
+               class="faqEntry__urlOverlay"
+               title="{$Category->getAttribute('title')|escape:'html'}"
+               aria-label="{$Category->getAttribute('title')|escape:'html'}">
+            </a>
+
             {if $showImage}
-                <a itemprop="mainEntityOfPage" href="{url site=$Category}" class="entry__image">
+                <div itemprop="image" class="faqEntry__image">
                     {image src=$Category->getAttribute('image_site') title=$Category->getAttribute('title')}
-                </a>
+                </div>
             {/if}
 
             {if $showTitle}
-            <a itemprop="mainEntityOfPage" href="{url site=$Category}" class="entry__title">
+            <span class="faqEntry__title">
                 <span itemprop="name">{$Category->getAttribute('title')}</span>
-            </a>
+            </span>
             {/if}
 
             {if $showDesc}
-            <div class="entry__desc">
+            <div class="faqEntry__desc">
                 {$Category->getAttribute('short')}
             </div>
             {/if}
 
-            {if !$nextCategoryLevel && $showButton}
-                <a itemprop="url" href="{url site=$Category}" class="btn btn-primary entry__btn">
-                    {locale group="quiqqer/faq" value="more"}
-                </a>
+            {if !$enableSubpages && $showButton}
+                <div class="faqEntry__btnContainer">
+                    <a itemprop="url" href="{url site=$Category}" class="{if $btnCssClass}{$btnCssClass}{else}btn btn-primary{/if} faqEntry__btn faqEntry__link">
+                        {locale group="quiqqer/faq" value="more"}
+                    </a>
+                </div>
             {/if}
 
-            {if $nextCategoryLevel}
+            {if $enableSubpages}
                 {assign var=faqList value=$Category->getChildren()}
                 {if count($faqList)}
-                    <hr class="entry__separator">
+                    <hr class="faqEntry__separator">
 
-                    <ul itemscope itemtype="https://schema.org/ItemList" class="entry__list">
+                    <ul itemscope itemtype="https://schema.org/ItemList" class="faqEntry__list">
                         {assign var=position value=1}
                         {foreach $faqList as $Faq}
-                            <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="entry__list-item">
+                            <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="faqEntry__list-item">
 
                                 {if $Faq->getAttribute('type') == 'quiqqer/faq:types/entry'}
                                     {assign var=url value="{url site=$Category}#faq{$Faq->getId()}"}
@@ -55,12 +61,12 @@
                                     {assign var=url value={url site=$Faq}}
                                 {/if}
 
-                                <a itemprop="url" href="{$url}" class="entry__list-item-link">
-                                    <span class="entry__list-item-link__title">
+                                <a itemprop="url" href="{$url}" class="faqEntry__list-item-link faqEntry__link">
+                                    <span class="faqEntry__list-item-link__title">
                                         <span itemprop="name">{$Faq->getAttribute('title')}</span>
                                         <meta itemprop="position" content="{$position}" />
                                     </span>
-                                        <i class="fa-solid fa-arrow-right entry__list-item-link__icon" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-arrow-right faqEntry__list-item-link__icon" aria-hidden="true"></i>
                                 </a>
                             </li>
                             {assign var=position value=$position+1}

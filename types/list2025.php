@@ -18,7 +18,9 @@ $FAQListControl = new QUI\FAQ\Controls\CategoryList([
   'showDesc' => $Site->getAttribute('quiqqer.faq.list2025.settings.showDesc'),
   'textAlignment' => $Site->getAttribute('quiqqer.faq.list2025.settings.textAlignment'),
   'showButton' => $Site->getAttribute('quiqqer.faq.list2025.settings.showButton'),
+  'btnCssClass' => $Site->getAttribute('quiqqer.faq.list2025.settings.btnCssClass'),
   'btnAlignment' => $Site->getAttribute('quiqqer.faq.list2025.settings.btnAlignment'),
+  'subpages' => $Site->getAttribute('quiqqer.faq.list2025.settings.subpages'),
   'parentSite' => $Site
 ]);
 
