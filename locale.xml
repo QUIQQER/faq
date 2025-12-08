@@ -153,6 +153,36 @@
             <en><![CDATA[Right]]></en>
         </locale>
 
+        <locale name="quiqqer.faq.list2025.settings.btnCssClass">
+            <de><![CDATA[Schaltfläche Vorlagenklasse (Button CSS)]]></de>
+            <en><![CDATA[Button css class]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.btnCssClass.desc">
+            <de><![CDATA[Wenn ausgefüllt, wird diese CSS-Klasse auf den Button angewendet.]]></de>
+            <en><![CDATA[If filled, this css class will be applied to the button.]]></en>
+        </locale>
+
+        <locale name="quiqqer.faq.list2025.settings.subpages">
+            <de><![CDATA[Unterseiten]]></de>
+            <en><![CDATA[Subpages]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.subpages.desc">
+            <de><![CDATA[Mit dieser Option können Unterseiten in der Kachel angezeigt werden. Es können entweder nur die FAQ‑Kategorien oder FAQ‑Kategorien und die FAQ Einträge angezeigt werden. Es werden nur direkte Unterseiten berücksichtigt.]]></de>
+            <en><![CDATA[With this option you can display subpages in the overview. You can choose to show only FAQ categories or FAQ categories with FAQ entries. Only direct subpages are taken into account.]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.subpages.disabled">
+            <de><![CDATA[Deaktiviert - keine Unterseiten anzeigen]]></de>
+            <en><![CDATA[Disabled - no subpages displayed]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.subpages.categories">
+            <de><![CDATA[FAQ Kategorien]]></de>
+            <en><![CDATA[FAQ categories]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.subpages.all">
+            <de><![CDATA[FAQ Kategorien und FAQ Einträge]]></de>
+            <en><![CDATA[FAQ categories and FAQ entries]]></en>
+        </locale>
+
 
         <locale name="admin.types.faq.category">
             <de><![CDATA[FAQ-Kategorie]]></de>

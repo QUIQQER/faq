@@ -25,6 +25,8 @@
                 <attribute default="left">quiqqer.faq.list2025.settings.textAlignment</attribute>
                 <attribute default="1">quiqqer.faq.list2025.settings.showButton</attribute>
                 <attribute default="stretch">quiqqer.faq.list2025.settings.btnAlignment</attribute>
+                <attribute>quiqqer.faq.list2025.settings.btnCssClass</attribute>
+                <attribute>quiqqer.faq.list2025.settings.subpages</attribute>
             </attributes>
 
             <settings>
@@ -124,6 +126,15 @@
                             </description>
                         </input>
 
+                        <input conf="quiqqer.faq.list2025.settings.btnCssClass">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnCssClass"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnCssClass.desc"/>
+                            </description>
+                        </input>
+
                         <select conf="quiqqer.faq.list2025.settings.btnAlignment">
                             <text>
                                 <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnAlignment"/>
@@ -142,6 +153,26 @@
                             </option>
                             <option value="right">
                                 <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.btnAlignment.right"/>
+                            </option>
+                        </select>
+
+                        <select conf="quiqqer.faq.list2025.settings.subpages">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.subpages"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.subpages.desc"/>
+                            </description>
+
+                            <option></option>
+                            <option value="">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.subpages.disabled"/>
+                            </option>
+                            <option value="categories">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.subpages.categories"/>
+                            </option>
+                            <option value="all">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.subpages.all"/>
                             </option>
                         </select>
                     </settings>

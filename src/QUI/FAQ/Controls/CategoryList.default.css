@@ -12,7 +12,7 @@
     --_image-alignment: var(--image-alignment, var(--settings--qui-faq-control-categoryList-imageAlignment, center));
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entries) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntries) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
@@ -20,22 +20,39 @@
     max-width: var(--_container-maxWidth);
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry) {
     display: flex;
     flex-direction: column;
     padding: var(--_box-padding);
     border: var(--_box-borderWidth) solid var(--_box-borderColor);
     background: var(--_box-bgColor);
     border-radius: var(--_box-borderRadius);
+    position: relative;
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__image) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry:hover) {
+    outline: 2px solid;
+}
+
+.quiqqer-faq-control-categoryList--default .faqEntry__urlOverlay {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--_box-borderRadius);
+    z-index: 1;
+}
+
+.quiqqer-faq-control-categoryList--default .faqEntry__link {
+    position: relative;
+    z-index: 2;
+}
+
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__image) {
     margin-bottom: 0.5em;
     max-width: var(--_image-width);
     align-self: var(--_image-alignment);
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__title) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__title) {
     margin-bottom: 0.5em;
     font-size: 1.125em;
     font-weight: bold;
@@ -43,45 +60,47 @@
     align-self: var(--_text-flexbox-alignment);
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__desc) {
-    margin-bottom: 1.5em;
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__desc) {
+    margin-bottom: 0.5em;
     text-align: var(--_text-alignment);
     align-self: var(--_text-flexbox-alignment);
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__title):not(:hover) {
-    color: inherit;
-}
-
-.quiqqer-faq-control-categoryList--default :where(.entry__btn) {
+.quiqqer-faq-control-categoryList--default .faqEntry__btnContainer {
     margin-top: auto;
     align-self: var(--_btn-alignment);
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__separator) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__btn) {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__separator) {
     margin-block: 0 1.5em;
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__list) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__list) {
     list-style: none;
     padding: 0;
+    margin-bottom: 0;
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__list-item) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__list-item) {
     padding-left: 0;
     margin: 0 0 .75em 0;
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__list-item-link) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__list-item-link) {
     display: flex;
     gap: 0.5em;
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__list-item-link:not(:hover,.active,.focus)) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__list-item-link:not(:hover,.active,.focus)) {
     color: inherit;
 }
 
-.quiqqer-faq-control-categoryList--default :where(.entry__list-item-link__icon) {
+.quiqqer-faq-control-categoryList--default :where(.faqEntry__list-item-link__icon) {
     margin-left: auto;
     line-height: inherit;
 }
