@@ -14,5 +14,6 @@ $categories = $Site->getChildren([
 ]);
 
 $Engine->assign([
-    'categories' => $categories
+    'categories' => $categories,
+    'jsonLd' => QUI\FAQ\JsonLd::getJsonLdFromSite($Site)
 ]);
