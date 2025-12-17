@@ -52,6 +52,6 @@ class JsonLd
 
         $jsonLd['mainEntity'] = $mainEntities;
 
-        return '<script type="application/ld+json">'. json_encode($jsonLd) .'</script>';
+        return '<script type="application/ld+json">' . json_encode($jsonLd) . '</script>';
     }
 }
