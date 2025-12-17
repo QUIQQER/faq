@@ -25,5 +25,6 @@ $FAQListControl = new QUI\FAQ\Controls\CategoryList([
 ]);
 
 $Engine->assign([
-    'FAQListControl' => $FAQListControl
+    'FAQListControl' => $FAQListControl,
+    'jsonLd' => QUI\FAQ\JsonLd::getJsonLdFromSite($Site)
 ]);
