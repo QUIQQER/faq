@@ -4,6 +4,10 @@
     </section>
 {/if}
 
+{if !empty($jsonLd)}
+{$jsonLd}
+{/if}
+
 <div class="content-template content-template__faqList2025">
     {$FAQListControl->create()}
 </div>
