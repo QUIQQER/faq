@@ -29,7 +29,7 @@ class JsonLd
 
                 if ($child->getAttribute('type') === 'quiqqer/faq:types/entry') {
                     $answer = '';
-                    $answer .= $child->getAttribute('description');
+                    $answer .= $child->getAttribute('short');
                     $answer .= $child->getAttribute('content');
 
                     $answer = strip_tags(
