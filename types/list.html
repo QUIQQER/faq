@@ -21,11 +21,10 @@
 
             <section class="content-template-faq-list-category
                             {if !$nextCategoryLevel} lastCategoryLevel{/if}"
-                     itemscope itemtype="https://schema.org/ItemList"
             >
                 <h2 class="control-color">
-                    <a itemprop="mainEntityOfPage" href="{url site=$Category}">
-                        <span itemprop="name">{$Category->getAttribute('title')}</span>
+                    <a href="{url site=$Category}">
+                        <span>{$Category->getAttribute('title')}</span>
                     </a>
                 </h2>
 
@@ -34,7 +33,7 @@
                 </div>
 
                 {if !$nextCategoryLevel}
-                    <a itemprop="url" href="{url site=$Category}" class="button button-arrow">
+                    <a href="{url site=$Category}" class="button button-arrow">
                         {locale group="quiqqer/faq" value="more"}
                     </a>
                 {/if}
@@ -42,19 +41,18 @@
                 {if $nextCategoryLevel}
                     {assign var=faqList value=$Category->getChildren()}
                     {if count($faqList)}
-                    <ul itemscope itemtype="https://schema.org/ItemList">
+                    <ul>
                         {assign var=position value=1}
                         {foreach $faqList as $Faq}
-                        <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+                        <li>
 
                             {if $Faq->getAttribute('type') == 'quiqqer/faq:types/entry'}
-                            <a itemprop="url" href="{url site=$Category}#faq{$Faq->getId()}">
+                            <a href="{url site=$Category}#faq{$Faq->getId()}">
                             {else}
-                            <a itemprop="url" href="{url site=$Faq}">
+                            <a href="{url site=$Faq}">
                                 {/if}
                                 <span class="list-style-block control-background"></span>
-                                <span itemprop="name">{$Faq->getAttribute('title')}</span>
-                                <meta itemprop="position" content="{$position}" />
+                                <span>{$Faq->getAttribute('title')}</span>
                                 {assign var=position value=$position+1}
                             </a>
                         </li>

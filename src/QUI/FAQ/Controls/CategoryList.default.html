@@ -4,30 +4,29 @@
     </div>
 {/if}
 
-<div class="control-template faqEntries" itemscope itemtype="https://schema.org/ItemList">
+<div class="control-template faqEntries">
     {foreach from=$faqCategories item=Category}
         {assign var=enableSubpages value=false}
         {if $subpages && in_array($Category->getAttribute('type'), $types)}
             {assign var=enableSubpages value=true}
         {/if}
 
-        <section class="faqEntry" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
-            <a itemprop="url"
-               href="{url site=$Category}"
+        <section class="faqEntry">
+            <a href="{url site=$Category}"
                class="faqEntry__urlOverlay"
                title="{$Category->getAttribute('title')|escape:'html'}"
                aria-label="{$Category->getAttribute('title')|escape:'html'}">
             </a>
 
             {if $showImage}
-                <div itemprop="image" class="faqEntry__image">
+                <div class="faqEntry__image">
                     {image src=$Category->getAttribute('image_site') title=$Category->getAttribute('title')}
                 </div>
             {/if}
 
             {if $showTitle}
             <span class="faqEntry__title">
-                <span itemprop="name">{$Category->getAttribute('title')}</span>
+                <span>{$Category->getAttribute('title')}</span>
             </span>
             {/if}
 
@@ -39,7 +38,7 @@
 
             {if !$enableSubpages && $showButton}
                 <div class="faqEntry__btnContainer">
-                    <a itemprop="url" href="{url site=$Category}" class="{if $btnCssClass}{$btnCssClass}{else}btn btn-primary{/if} faqEntry__btn faqEntry__link">
+                    <a href="{url site=$Category}" class="{if $btnCssClass}{$btnCssClass}{else}btn btn-primary{/if} faqEntry__btn faqEntry__link">
                         {locale group="quiqqer/faq" value="more"}
                     </a>
                 </div>
@@ -50,10 +49,10 @@
                 {if count($faqList)}
                     <hr class="faqEntry__separator">
 
-                    <ul itemscope itemtype="https://schema.org/ItemList" class="faqEntry__list">
+                    <ul class="faqEntry__list">
                         {assign var=position value=1}
                         {foreach $faqList as $Faq}
-                            <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="faqEntry__list-item">
+                            <li class="faqEntry__list-item">
 
                                 {if $Faq->getAttribute('type') == 'quiqqer/faq:types/entry'}
                                     {assign var=url value="{url site=$Category}#faq{$Faq->getId()}"}
@@ -61,10 +60,9 @@
                                     {assign var=url value={url site=$Faq}}
                                 {/if}
 
-                                <a itemprop="url" href="{$url}" class="faqEntry__list-item-link faqEntry__link">
+                                <a href="{$url}" class="faqEntry__list-item-link faqEntry__link">
                                     <span class="faqEntry__list-item-link__title">
-                                        <span itemprop="name">{$Faq->getAttribute('title')}</span>
-                                        <meta itemprop="position" content="{$position}" />
+                                        <span>{$Faq->getAttribute('title')}</span>
                                     </span>
                                         <i class="fa-solid fa-arrow-right faqEntry__list-item-link__icon" aria-hidden="true"></i>
                                 </a>
