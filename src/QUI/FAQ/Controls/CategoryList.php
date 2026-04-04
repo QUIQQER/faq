@@ -39,6 +39,7 @@ class CategoryList extends QUI\Control
             'showImage' => false,
             'imageWidth' => 'all', // any css valid value
             'imageAlignment' => 'center', // flex-start / center / flex-end
+            'iconSize' => 'normal',
             'showTitle' => true,
             'showDesc' => true,
             'textAlignment' => 'left', // left / center / right
@@ -97,7 +98,7 @@ class CategoryList extends QUI\Control
             default => 'stretch'
         };
 
-        $this->setStyle('--settings--qui-faq-control-categoryList-btnAlignment', $btnAlignment);
+        $this->setStyle('--settings--btnAlignment', $btnAlignment);
 
         // image
         $imageWidth = $this->getAttribute('imageWidth');
@@ -106,12 +107,19 @@ class CategoryList extends QUI\Control
             'right' => 'flex-end',
             default => 'center'
         };
+        $iconSize = match ($this->getAttribute('iconSize')) {
+            'small' => '1.5rem',
+            'large' => '5rem',
+            'x-large' => '8rem',
+            default => '2.5rem'
+        };
 
         if ($imageWidth) {
-            $this->setStyle('--settings--qui-faq-control-categoryList-imageWidth', $imageWidth);
+            $this->setStyle('--settings--imageWidth', $imageWidth);
         }
 
-        $this->setStyle('--settings--qui-faq-control-categoryList-imageAlignment', $imageAlignment);
+        $this->setStyle('--settings--imageAlignment', $imageAlignment);
+        $this->setStyle('--settings--iconSize', $iconSize);
 
         // text position
         [$textFlexboxAlignment, $textAlignment] = match ($this->getAttribute('textAlignment')) {
@@ -120,8 +128,8 @@ class CategoryList extends QUI\Control
             default => ['center', 'center']
         };
 
-        $this->setStyle('--settings--qui-faq-control-categoryList-textFlexboxAlignment', $textFlexboxAlignment);
-        $this->setStyle('--settings--qui-faq-control-categoryList-textAlignment', $textAlignment);
+        $this->setStyle('--settings--textFlexboxAlignment', $textFlexboxAlignment);
+        $this->setStyle('--settings--textAlignment', $textAlignment);
 
         // subpages
         $types = [];

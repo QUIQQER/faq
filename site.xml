@@ -20,6 +20,7 @@
                 <attribute default="1">quiqqer.faq.list2025.settings.showImage</attribute>
                 <attribute>quiqqer.faq.list2025.settings.imageWidth</attribute>
                 <attribute default="center">quiqqer.faq.list2025.settings.imageAlignment</attribute>
+                <attribute default="normal">quiqqer.faq.list2025.settings.iconSize</attribute>
                 <attribute default="1">quiqqer.faq.list2025.settings.showTitle</attribute>
                 <attribute default="1">quiqqer.faq.list2025.settings.showDesc</attribute>
                 <attribute default="left">quiqqer.faq.list2025.settings.textAlignment</attribute>
@@ -78,6 +79,24 @@
                             </option>
                             <option value="right">
                                 <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.imageAlignment.right"/>
+                            </option>
+                        </select>
+
+                        <select conf="quiqqer.faq.list2025.settings.iconSize">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.iconSize"/>
+                            </text>
+                            <option value="small">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.iconSize.small"/>
+                            </option>
+                            <option value="normal">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.iconSize.normal"/>
+                            </option>
+                            <option value="large">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.iconSize.large"/>
+                            </option>
+                            <option value="x-large">
+                                <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.iconSize.xLarge"/>
                             </option>
                         </select>
 
