@@ -44,12 +44,12 @@
             <en><![CDATA[Default]]></en>
         </locale>
         <locale name="quiqqer.faq.list2025.settings.showImage">
-            <de><![CDATA[Bild anzeigen]]></de>
-            <en><![CDATA[Show image]]></en>
+            <de><![CDATA[Bild / Icon anzeigen]]></de>
+            <en><![CDATA[Show image / icon]]></en>
         </locale>
         <locale name="quiqqer.faq.list2025.settings.showImage.desc">
             <de><![CDATA[Wenn aktiviert und die Seite ein Bild enthält, wird das Bild angezeigt. <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
-            <en><![CDATA[If enabled and the page contains an image, the image will be displayed. <strong>Note:</strong> Not every template supports this option.]]></en>
+            <en><![CDATA[If enabled and the page contains an image or icon, the image or icon will be displayed. <strong>Note:</strong> Not every template supports this option.]]></en>
         </locale>
         <locale name="quiqqer.faq.list2025.settings.imageWidth">
             <de><![CDATA[Bildbreite]]></de>
@@ -61,12 +61,12 @@
         </locale>
 
         <locale name="quiqqer.faq.list2025.settings.imageAlignment">
-            <de><![CDATA[Bild Positionierung]]></de>
-            <en><![CDATA[Image alignment]]></en>
+            <de><![CDATA[Bild / Icon Positionierung]]></de>
+            <en><![CDATA[Image / icon alignment]]></en>
         </locale>
         <locale name="quiqqer.faq.list2025.settings.imageAlignment.desc">
             <de><![CDATA[Bestimmt die Position des Bildes. <strong>Hinweis:</strong> Nicht jede Vorlage unterstützt diese Option.]]></de>
-            <en><![CDATA[Determines the position of the image. <strong>Note:</strong> Not every template supports this option.]]></en>
+            <en><![CDATA[Determines the position of the image or icon. <strong>Note:</strong> Not every template supports this option.]]></en>
         </locale>
         <locale name="quiqqer.faq.list2025.settings.imageAlignment.left">
             <de><![CDATA[Links]]></de>
@@ -79,6 +79,27 @@
         <locale name="quiqqer.faq.list2025.settings.imageAlignment.right">
             <de><![CDATA[Rechts]]></de>
             <en><![CDATA[Right]]></en>
+        </locale>
+
+        <locale name="quiqqer.faq.list2025.settings.iconSize">
+            <de><![CDATA[Icon Größe]]></de>
+            <en><![CDATA[Icon size]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.iconSize.small">
+            <de><![CDATA[Klein]]></de>
+            <en><![CDATA[Small]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.iconSize.normal">
+            <de><![CDATA[Normal]]></de>
+            <en><![CDATA[Normal]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.iconSize.large">
+            <de><![CDATA[Groß]]></de>
+            <en><![CDATA[Large]]></en>
+        </locale>
+        <locale name="quiqqer.faq.list2025.settings.iconSize.xLarge">
+            <de><![CDATA[Sehr groß]]></de>
+            <en><![CDATA[Very large]]></en>
         </locale>
 
         <locale name="quiqqer.faq.list2025.settings.showTitle">

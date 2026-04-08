@@ -14,6 +14,7 @@ $FAQListControl = new QUI\FAQ\Controls\CategoryList([
   'showImage' => $Site->getAttribute('quiqqer.faq.list2025.settings.showImage'),
   'imageWidth' => $Site->getAttribute('quiqqer.faq.list2025.settings.imageWidth'),
   'imageAlignment' => $Site->getAttribute('quiqqer.faq.list2025.settings.imageAlignment'),
+  'iconSize' => $Site->getAttribute('quiqqer.faq.list2025.settings.iconSize'),
   'showTitle' => $Site->getAttribute('quiqqer.faq.list2025.settings.showTitle'),
   'showDesc' => $Site->getAttribute('quiqqer.faq.list2025.settings.showDesc'),
   'textAlignment' => $Site->getAttribute('quiqqer.faq.list2025.settings.textAlignment'),
