@@ -31,6 +31,8 @@ class Accordion extends QUI\Control
         // default options
         $this->setAttributes([
             'class' => 'quiqqer-faqAccordion',
+            'template' => 'default',
+            'columns' => 1,
             'order' => 'order_field',
             'stayOpen' => true, // if true make accordion items stay open when another item is opened
             'openFirst' => true, // the first entry is initially opened
@@ -140,6 +142,8 @@ class Accordion extends QUI\Control
         }
 
         $Accordion = new QUI\Bricks\Controls\Accordion([
+            'template' => $this->getAttribute('template'),
+            'columns' => $this->getAttribute('columns'),
             'stayOpen' => boolval($this->getAttribute('stayOpen')),
             'openFirst' => $this->getAttribute('openFirst'),
             'listMaxWidth' => $this->getAttribute('listMaxWidth'),

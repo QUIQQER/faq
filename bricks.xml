@@ -59,6 +59,22 @@
                     </option>
                 </setting>
 
+                <setting name="template" type="hidden"
+                         data-qui="package/quiqqer/bricks/bin/Controls/backend/AccordionLayoutSelect">
+                    <locale group="quiqqer/bricks" var="brick.accordion.template"/>
+                </setting>
+
+                <setting name="columns" type="select">
+                    <locale group="quiqqer/bricks" var="brick.accordion.columns"/>
+
+                    <option value="1">
+                        <locale group="quiqqer/bricks" var="brick.accordion.columns.1"/>
+                    </option>
+                    <option value="2">
+                        <locale group="quiqqer/bricks" var="brick.accordion.columns.2"/>
+                    </option>
+                </setting>
+
                 <setting name="stayOpen" type="checkbox">
                     <locale group="quiqqer/faq" var="brick.accordion.settings.stayOpen"/>
 
@@ -71,7 +87,7 @@
                     <locale group="quiqqer/faq" var="brick.accordion.settings.openFirst"/>
                 </setting>
 
-                <setting name="listMaxWidth" type="number" min="0" max="1920">
+                <setting name="listMaxWidth" type="text">
                     <locale group="quiqqer/faq" var="brick.accordion.settings.listMaxWidth"/>
                     <description>
                         <locale group="quiqqer/faq" var="brick.accordion.settings.listMaxWidth.desc"/>

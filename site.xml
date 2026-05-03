@@ -208,7 +208,11 @@
             <attributes>
                 <attribute default="1">quiqqer.faq.settings.useFaqStructuredData</attribute>
                 <attribute default="default">quiqqer.faq.settings.template</attribute>
+                <attribute default="default">quiqqer.faq.settings.accordion.template</attribute>
+                <attribute default="1">quiqqer.faq.settings.accordion.columns</attribute>
+                <attribute default="">quiqqer.faq.settings.accordion.listMaxWidth</attribute>
                 <attribute default="1">quiqqer.faq.settings.accordion.stayOpen</attribute>
+                <attribute default="1">quiqqer.faq.settings.accordion.openFirst</attribute>
                 <attribute default="0">quiqqer.faq.settings.offset</attribute>
             </attributes>
 
@@ -228,7 +232,9 @@
                             </description>
                         </input>
 
-                        <select conf="quiqqer.faq.settings.template">
+                        <select conf="quiqqer.faq.settings.template"
+                                data-qui="package/quiqqer/faq/bin/Controls/backend/SettingDependency"
+                        >
                             <text>
                                 <locale group="quiqqer/faq" var="quiqqer.faq.category.settings.template"/>
                             </text>
@@ -240,13 +246,74 @@
                             </option>
                         </select>
 
-                        <input conf="quiqqer.faq.settings.accordion.stayOpen" type="checkbox">
+                        <input conf="quiqqer.faq.settings.accordion.template"
+                               type="hidden"
+                               data-qui="package/quiqqer/bricks/bin/Controls/backend/AccordionLayoutSelect"
+                               data-qui-options-allowedlayouts="default,simple,boxOutline,boxOutlineAccent,boxOutlineTextColor,boxFillAccent,boxFillSubtle,softCard,softCardAccentFill"
+                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency-options="accordion"
+                        >
                             <text>
-                                <locale group="quiqqer/faq" var="quiqqer.faq.settings.accordion.stayOpen"/>
+                                <locale group="quiqqer/bricks" var="brick.accordion.template"/>
                             </text>
                         </input>
 
-                        <input conf="quiqqer.faq.settings.offset" type="number">
+                        <select conf="quiqqer.faq.settings.accordion.columns"
+                                data-dependency="faq-quiqqer.faq.settings.template"
+                                data-dependency-options="accordion"
+                        >
+                            <text>
+                                <locale group="quiqqer/bricks" var="brick.accordion.columns"/>
+                            </text>
+                            <option value="1">
+                                <locale group="quiqqer/bricks" var="brick.accordion.columns.1"/>
+                            </option>
+                            <option value="2">
+                                <locale group="quiqqer/bricks" var="brick.accordion.columns.2"/>
+                            </option>
+                        </select>
+
+                        <input conf="quiqqer.faq.settings.accordion.listMaxWidth"
+                               type="text"
+                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency-options="accordion"
+                        >
+                            <text>
+                                <locale group="quiqqer/faq" var="brick.accordion.settings.listMaxWidth"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="brick.accordion.settings.listMaxWidth.desc"/>
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.faq.settings.accordion.stayOpen"
+                               type="checkbox"
+                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency-options="accordion"
+                        >
+                            <text>
+                                <locale group="quiqqer/faq" var="brick.accordion.settings.stayOpen"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="brick.accordion.settings.stayOpen.desc"/>
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.faq.settings.accordion.openFirst"
+                               type="checkbox"
+                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency-options="accordion"
+                        >
+                            <text>
+                                <locale group="quiqqer/faq" var="brick.accordion.settings.openFirst"/>
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.faq.settings.offset"
+                               type="number"
+                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency-options="default"
+                        >
                             <text>
                                 <locale group="quiqqer/faq" var="quiqqer.faq.category.settings.offset"/>
                             </text>

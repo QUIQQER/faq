@@ -24,8 +24,12 @@ switch ($Site->getAttribute('quiqqer.faq.settings.template')) {
         $faqTemplate = 'accordion';
 
         $FAQControl = new \QUI\FAQ\Controls\Accordion([
+            'template' => $Site->getAttribute('quiqqer.faq.settings.accordion.template'),
+            'columns' => (int)$Site->getAttribute('quiqqer.faq.settings.accordion.columns'),
+            'listMaxWidth' => $Site->getAttribute('quiqqer.faq.settings.accordion.listMaxWidth'),
             'max' => 50,
             'stayOpen' => $Site->getAttribute('quiqqer.faq.settings.accordion.stayOpen'),
+            'openFirst' => $Site->getAttribute('quiqqer.faq.settings.accordion.openFirst'),
             'parentSite' => $Site,
             'useFaqStructuredData' => $useFaqStructuredData
         ]);
