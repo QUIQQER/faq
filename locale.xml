@@ -321,7 +321,7 @@
             <en><![CDATA[The first entry is initial open]]></en>
         </locale>
         <locale name="brick.accordion.settings.listMaxWidth">
-            <de><![CDATA[Maximalae Akkordeon Breite]]></de>
+            <de><![CDATA[Maximale Akkordeon-Breite]]></de>
             <en><![CDATA[Max accordion width]]></en>
         </locale>
         <locale name="brick.accordion.settings.listMaxWidth.desc">
