@@ -249,7 +249,6 @@
                         <input conf="quiqqer.faq.settings.accordion.template"
                                type="hidden"
                                data-qui="package/quiqqer/bricks/bin/Controls/backend/AccordionLayoutSelect"
-                               data-qui-options-allowedlayouts="default,simple,boxOutline,boxOutlineAccent,boxOutlineTextColor,boxFillAccent,boxFillSubtle,softCard,softCardAccentFill"
                                data-dependency="faq-quiqqer.faq.settings.template"
                                data-dependency-options="accordion"
                         >
