@@ -1,5 +1,5 @@
 <div>
-    {if $Template->getAttribute('content-header')}
+    {if $Template->getAttribute('content-header') && $Site->getAttribute('quiqqer.faq.entry.settings.showHeader')}
     <section class="content-header grid-100 mobile-grid-100">
         <header>
             <h1>{$Site->getAttribute('title')}</h1>

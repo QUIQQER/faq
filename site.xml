@@ -330,6 +330,29 @@
             <desc>
                 <locale group="quiqqer/faq" var="admin.types.faq.entry.desc" />
             </desc>
+
+            <attributes>
+                <attribute default="1">quiqqer.faq.entry.settings.showHeader</attribute>
+            </attributes>
+
+            <settings>
+                <category name="faq-entry-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/faq" var="quiqqer.faq.entry.settings.title"/>
+                        </title>
+
+                        <input conf="quiqqer.faq.entry.settings.showHeader" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.entry.settings.showHeader"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="quiqqer.faq.entry.settings.showHeader.desc"/>
+                            </description>
+                        </input>
+                    </settings>
+                </category>
+            </settings>
         </type>
     </types>
 

@@ -258,6 +258,18 @@
             <de><![CDATA[FAQ-Kategorie Einstellungen]]></de>
             <en><![CDATA[Offset]]></en>
         </locale>
+        <locale name="quiqqer.faq.entry.settings.title">
+            <de><![CDATA[FAQ-Eintrag Einstellungen]]></de>
+            <en><![CDATA[FAQ entry settings]]></en>
+        </locale>
+        <locale name="quiqqer.faq.entry.settings.showHeader">
+            <de><![CDATA[Header anzeigen]]></de>
+            <en><![CDATA[Show header]]></en>
+        </locale>
+        <locale name="quiqqer.faq.entry.settings.showHeader.desc">
+            <de><![CDATA[Wenn deaktiviert, wird der Header-Bereich mit Seitentitel und Kurzbeschreibung oberhalb des Inhalts nicht ausgegeben.]]></de>
+            <en><![CDATA[If disabled, the header section with page title and short description above the content will not be rendered.]]></en>
+        </locale>
         <locale name="quiqqer.faq.category.settings.offset">
             <de><![CDATA[Versatz]]></de>
             <en><![CDATA[Offset]]></en>
