@@ -31,6 +31,10 @@
             <de><![CDATA[Verbesserte FAQ-Liste mit korrekten semantischen Elementen und Schema Markup.]]></de>
             <en><![CDATA[Improved FAQ List with correct semantic elements and Schema Markup.]]></en>
         </locale>
+        <locale name="quiqqer.faq.list.settings.title">
+            <de><![CDATA[FAQ-Liste: Einstellungen]]></de>
+            <en><![CDATA[FAQ List: Settings]]></en>
+        </locale>
         <locale name="quiqqer.faq.list2025.settings.title">
             <de><![CDATA[FAQ-Liste: Einstellungen]]></de>
             <en><![CDATA[FAQ List: Settings]]></en>

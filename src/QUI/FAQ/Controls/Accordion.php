@@ -24,7 +24,7 @@ class Accordion extends QUI\Control
     /**
      * constructor
      *
-     * @param array $attributes
+     * @param array<string, mixed> $attributes
      */
     public function __construct(array $attributes = [])
     {
@@ -63,21 +63,22 @@ class Accordion extends QUI\Control
      */
     public function getBody(): string
     {
-        $FAQParentSite = null;
         $Engine = QUI::getTemplateManager()->getEngine();
+        $parentSite = $this->getAttribute('parentSite');
 
-        if ($this->getAttribute('parentSite')) {
-            try {
-                if ($this->getAttribute('parentSite') instanceof Site) {
-                    $FAQParentSite = $this->getAttribute('parentSite');
-                } else {
-                    $FAQParentSite = Utils::getSiteByLink($this->getAttribute('parentSite'));
-                }
-            } catch (QUI\Exception $Exception) {
-                QUI\System\Log::addInfo($Exception->getMessage());
-
+        try {
+            if ($parentSite instanceof Site) {
+                $FAQParentSite = $parentSite;
+            } elseif (is_string($parentSite) && $parentSite !== '') {
+                $FAQParentSite = Utils::getSiteByLink($parentSite);
+            } else {
+                QUI\System\Log::addError('No FAQ category parent site found');
                 return '';
             }
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::addInfo($Exception->getMessage());
+
+            return '';
         }
 
         $faqSites = $FAQParentSite->getChildren([
@@ -88,6 +89,10 @@ class Accordion extends QUI\Control
             'limit' => $this->getAttribute('max'),
             'order' => $this->getAttribute('order')
         ]);
+
+        if (!is_array($faqSites)) {
+            return '';
+        }
 
         // show "more faq" link
         $showMoreButton = $this->getAttribute('showMoreButton');
@@ -111,7 +116,7 @@ class Accordion extends QUI\Control
                     'count' => 1
                 ]);
 
-                if ($countFaqEntries <= $this->getAttribute('max')) {
+                if (is_int($countFaqEntries) && $countFaqEntries <= (int)$this->getAttribute('max')) {
                     $showMoreButton = false;
                 }
             }
@@ -120,21 +125,27 @@ class Accordion extends QUI\Control
         $entries = [];
 
         foreach ($faqSites as $FaqSite) {
+            if (!($FaqSite instanceof Site)) {
+                continue;
+            }
+
             $short = $FaqSite->getAttribute('short');
             $content = $FaqSite->getAttribute('content');
+            $shortHtml = '';
+            $contentHtml = '';
 
-            if ($short) {
-                $short = '<div class="quiqqer-faqAccordion-item-content-pageShort text-muted">' . $short . '</div>';
+            if (is_scalar($short) && $short !== '') {
+                $shortHtml = '<div class="quiqqer-faqAccordion-item-content-pageShort text-muted">' . $short . '</div>';
             }
 
-            if ($content) {
-                $content = '<div class="quiqqer-faqAccordion-item-content-pageContent">' . $content . '</div>';
+            if (is_scalar($content) && $content !== '') {
+                $contentHtml = '<div class="quiqqer-faqAccordion-item-content-pageContent">' . $content . '</div>';
             }
 
-            $entryContent = $short . $content;
+            $entryContent = $shortHtml . $contentHtml;
 
             $entry = [
-                'entryTitle' => $FaqSite->getAttribute('title'),
+                'entryTitle' => (string)$FaqSite->getAttribute('title'),
                 'entryContent' => $entryContent,
             ];
 

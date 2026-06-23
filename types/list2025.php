@@ -25,7 +25,13 @@ $FAQListControl = new QUI\FAQ\Controls\CategoryList([
   'parentSite' => $Site
 ]);
 
+$jsonLd = '';
+
+if ($Site->getAttribute('quiqqer.faq.list2025.settings.useFaqStructuredData')) {
+    $jsonLd = QUI\FAQ\JsonLd::getJsonLdFromSite($Site);
+}
+
 $Engine->assign([
     'FAQListControl' => $FAQListControl,
-    'jsonLd' => QUI\FAQ\JsonLd::getJsonLdFromSite($Site)
+    'jsonLd' => $jsonLd
 ]);

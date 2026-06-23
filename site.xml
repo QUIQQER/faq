@@ -7,6 +7,29 @@
             <desc>
                 <locale group="quiqqer/faq" var="admin.types.faq.list.desc" />
             </desc>
+
+            <attributes>
+                <attribute default="0">quiqqer.faq.list.settings.useFaqStructuredData</attribute>
+            </attributes>
+
+            <settings>
+                <category name="faq-list-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/faq" var="quiqqer.faq.list.settings.title"/>
+                        </title>
+
+                        <input conf="quiqqer.faq.list.settings.useFaqStructuredData" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/faq" var="faq.settings.useFaqStructuredData"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="faq.settings.useFaqStructuredData.desc"/>
+                            </description>
+                        </input>
+                    </settings>
+                </category>
+            </settings>
         </type>
 
         <type type="types/list2025" icon="fa fa-list-alt" child-type="quiqqer/faq:types/category">
@@ -16,6 +39,7 @@
             </desc>
 
             <attributes>
+                <attribute default="0">quiqqer.faq.list2025.settings.useFaqStructuredData</attribute>
                 <attribute default="default">quiqqer.faq.list2025.settings.template</attribute>
                 <attribute default="1">quiqqer.faq.list2025.settings.showImage</attribute>
                 <attribute>quiqqer.faq.list2025.settings.imageWidth</attribute>
@@ -36,6 +60,15 @@
                         <title>
                             <locale group="quiqqer/faq" var="quiqqer.faq.list2025.settings.title"/>
                         </title>
+
+                        <input conf="quiqqer.faq.list2025.settings.useFaqStructuredData" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/faq" var="faq.settings.useFaqStructuredData"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/faq" var="faq.settings.useFaqStructuredData.desc"/>
+                            </description>
+                        </input>
 
                         <select conf="quiqqer.faq.list2025.settings.template">
                             <text>
