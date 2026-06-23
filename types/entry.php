@@ -10,6 +10,11 @@
  **/
 
 $Parent = $Site->getParent();
+
+if (!($Parent instanceof QUI\Projects\Site)) {
+    return;
+}
+
 $parentType = $Parent->getAttribute('type');
 
 if (

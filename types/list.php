@@ -13,7 +13,13 @@ $categories = $Site->getChildren([
     'type' => 'quiqqer/faq:types/category'
 ]);
 
+$jsonLd = '';
+
+if ($Site->getAttribute('quiqqer.faq.list.settings.useFaqStructuredData')) {
+    $jsonLd = QUI\FAQ\JsonLd::getJsonLdFromSite($Site);
+}
+
 $Engine->assign([
     'categories' => $categories,
-    'jsonLd' => QUI\FAQ\JsonLd::getJsonLdFromSite($Site)
+    'jsonLd' => $jsonLd
 ]);

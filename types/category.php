@@ -13,6 +13,10 @@ $entries = $Site->getChildren([
     'type' => 'quiqqer/faq:types/entry'
 ]);
 
+if (!is_array($entries)) {
+    $entries = [];
+}
+
 $faqTemplate = 'default';
 $offset = false;
 $FAQControl = null;
@@ -43,21 +47,27 @@ switch ($Site->getAttribute('quiqqer.faq.settings.template')) {
             $jsonSchemaEntries = [];
 
             foreach ($entries as $FaqSite) {
+                if (!($FaqSite instanceof QUI\Projects\Site)) {
+                    continue;
+                }
+
                 $short = $FaqSite->getAttribute('short');
                 $content = $FaqSite->getAttribute('content');
+                $shortHtml = '';
+                $contentHtml = '';
 
-                if ($short) {
-                    $short = '<div class="quiqqer-faqAccordion-item-content-pageShort text-muted">' . $short . '</div>';
+                if (is_scalar($short) && $short !== '') {
+                    $shortHtml = '<div class="quiqqer-faqAccordion-item-content-pageShort text-muted">' . $short . '</div>';
                 }
 
-                if ($content) {
-                    $content = '<div class="quiqqer-faqAccordion-item-content-pageContent">' . $content . '</div>';
+                if (is_scalar($content) && $content !== '') {
+                    $contentHtml = '<div class="quiqqer-faqAccordion-item-content-pageContent">' . $content . '</div>';
                 }
 
-                $entryContent = $short . $content;
+                $entryContent = $shortHtml . $contentHtml;
 
                 $entry = [
-                    'entryTitle' => $FaqSite->getAttribute('title'),
+                    'entryTitle' => (string)$FaqSite->getAttribute('title'),
                     'entryContent' => $entryContent,
                 ];
 

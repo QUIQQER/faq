@@ -24,7 +24,7 @@ class CategoryList extends QUI\Control
     /**
      * constructor
      *
-     * @param array $attributes
+     * @param array<string, mixed> $attributes
      */
     public function __construct(array $attributes = [])
     {
@@ -77,11 +77,6 @@ class CategoryList extends QUI\Control
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::addInfo($Exception->getMessage());
 
-            return '';
-        }
-
-        if (!($FAQParentSite instanceof Site)) {
-            QUI\System\Log::addError('No FAQ category parent site found');
             return '';
         }
 
