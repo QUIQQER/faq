@@ -64,7 +64,7 @@ switch ($Site->getAttribute('quiqqer.faq.settings.template')) {
                     $contentHtml = '<div class="quiqqer-faqAccordion-item-content-pageContent">' . $content . '</div>';
                 }
 
-                $entryContent = $shortHtml . $contentHtml;
+                $entryContent = implode(' ', array_filter([$shortHtml, $contentHtml]));
 
                 $entry = [
                     'entryTitle' => (string)$FaqSite->getAttribute('title'),

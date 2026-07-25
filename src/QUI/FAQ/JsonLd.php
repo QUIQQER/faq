@@ -28,9 +28,19 @@ class JsonLd
                 $child = $project->get((int)$childId);
 
                 if ($child->getAttribute('type') === 'quiqqer/faq:types/entry') {
-                    $answer = '';
-                    $answer .= $child->getAttribute('short');
-                    $answer .= $child->getAttribute('content');
+                    $answerParts = [];
+                    $short = $child->getAttribute('short');
+                    $content = $child->getAttribute('content');
+
+                    if (is_scalar($short) && $short !== '') {
+                        $answerParts[] = (string)$short;
+                    }
+
+                    if (is_scalar($content) && $content !== '') {
+                        $answerParts[] = (string)$content;
+                    }
+
+                    $answer = implode(' ', $answerParts);
 
                     $answer = strip_tags(
                         $answer,
