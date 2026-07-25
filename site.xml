@@ -266,7 +266,7 @@
                         </input>
 
                         <select conf="quiqqer.faq.settings.template"
-                                data-qui="package/quiqqer/faq/bin/Controls/backend/SettingDependency"
+                                data-qui="package/quiqqer/core/bin/QUI/controls/settings/Dependency"
                         >
                             <text>
                                 <locale group="quiqqer/faq" var="quiqqer.faq.category.settings.template"/>
@@ -282,7 +282,7 @@
                         <input conf="quiqqer.faq.settings.accordion.template"
                                type="hidden"
                                data-qui="package/quiqqer/bricks/bin/Controls/backend/AccordionLayoutSelect"
-                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency="quiqqer.faq.settings.template"
                                data-dependency-options="accordion"
                         >
                             <text>
@@ -291,7 +291,7 @@
                         </input>
 
                         <select conf="quiqqer.faq.settings.accordion.columns"
-                                data-dependency="faq-quiqqer.faq.settings.template"
+                                data-dependency="quiqqer.faq.settings.template"
                                 data-dependency-options="accordion"
                         >
                             <text>
@@ -307,7 +307,7 @@
 
                         <input conf="quiqqer.faq.settings.accordion.listMaxWidth"
                                type="text"
-                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency="quiqqer.faq.settings.template"
                                data-dependency-options="accordion"
                         >
                             <text>
@@ -320,7 +320,7 @@
 
                         <input conf="quiqqer.faq.settings.accordion.stayOpen"
                                type="checkbox"
-                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency="quiqqer.faq.settings.template"
                                data-dependency-options="accordion"
                         >
                             <text>
@@ -333,7 +333,7 @@
 
                         <input conf="quiqqer.faq.settings.accordion.openFirst"
                                type="checkbox"
-                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency="quiqqer.faq.settings.template"
                                data-dependency-options="accordion"
                         >
                             <text>
@@ -343,7 +343,7 @@
 
                         <input conf="quiqqer.faq.settings.offset"
                                type="number"
-                               data-dependency="faq-quiqqer.faq.settings.template"
+                               data-dependency="quiqqer.faq.settings.template"
                                data-dependency-options="default"
                         >
                             <text>
