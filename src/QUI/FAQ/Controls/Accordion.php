@@ -125,10 +125,6 @@ class Accordion extends QUI\Control
         $entries = [];
 
         foreach ($faqSites as $FaqSite) {
-            if (!($FaqSite instanceof Site)) {
-                continue;
-            }
-
             $short = $FaqSite->getAttribute('short');
             $content = $FaqSite->getAttribute('content');
             $shortHtml = '';

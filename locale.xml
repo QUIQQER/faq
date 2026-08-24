@@ -260,7 +260,7 @@
 
         <locale name="quiqqer.faq.category.settings.title">
             <de><![CDATA[FAQ-Kategorie Einstellungen]]></de>
-            <en><![CDATA[Offset]]></en>
+            <en><![CDATA[FAQ category settings]]></en>
         </locale>
         <locale name="quiqqer.faq.entry.settings.title">
             <de><![CDATA[FAQ-Eintrag Einstellungen]]></de>
