@@ -8,6 +8,15 @@
             <locale group="quiqqer/faq" var="package.description"/>
         </description>
 
+        <capabilities schemaVersion="1">
+            <capability id="content.faq-management">
+                <title>FAQ management</title>
+                <description>
+                    Creates and publishes structured FAQ lists, categories, and entries with configurable list or accordion layouts and optional FAQPage structured data.
+                </description>
+            </capability>
+        </capabilities>
+
         <image src="URL_OPT_DIR/quiqqer/faq/bin/images/Logo.jpg"/>
 
         <preview>

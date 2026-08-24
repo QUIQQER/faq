@@ -47,10 +47,6 @@ switch ($Site->getAttribute('quiqqer.faq.settings.template')) {
             $jsonSchemaEntries = [];
 
             foreach ($entries as $FaqSite) {
-                if (!($FaqSite instanceof QUI\Projects\Site)) {
-                    continue;
-                }
-
                 $short = $FaqSite->getAttribute('short');
                 $content = $FaqSite->getAttribute('content');
                 $shortHtml = '';
