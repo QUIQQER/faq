@@ -143,6 +143,8 @@ class Accordion extends QUI\Control
             $entry = [
                 'entryTitle' => (string)$FaqSite->getAttribute('title'),
                 'entryContent' => $entryContent,
+                // same anchor as types/entry.php redirects to and the default list uses
+                'anchor' => 'faq' . $FaqSite->getId(),
             ];
 
             $entries[] = $entry;
